@@ -72,14 +72,9 @@ namespace StoreApp
     }
 
 
-    public class Employee : StorePerson
+    public class Employee(string name, string cell, double salary = 2500) : StorePerson(name, cell)
     {
-        public double Salary { get; }
-
-        public Employee(string name, string cell, double salary = 2500) : base(name, cell)
-        {
-            Salary = salary;
-        }
+        public double Salary { get; } = salary;
 
         public override string ToString()
         {
@@ -95,18 +90,18 @@ namespace StoreApp
         static Store()
         {
             people =
-       [
-           new Customer("Gokulraj", "123-4567"),
-           new Employee("Amy", "123-6789"),
-           new Employee("Kassie", "234-5678", 19000),
-           new Customer("Yao", "345-6789", 750),
-           new Employee("Zhiyang", "456-7890", 29000),
-           new Employee("Piyush", "678-9012", 17000),
-           new Customer("Hitesh", "890-1234", 400),
-           new Employee("Ahsan", "901-2345", 34000),
-           new Customer("Wahiba", "123-9012", 750),
-           new Employee("Rowel", "456-8901", 24800)
-       ];
+            [
+                new Customer("Gokulraj", "123-4567"),
+                new Employee("Amy", "123-6789"),
+                new Employee("Kassie", "234-5678", 19000),
+                new Customer("Yao", "345-6789", 750),
+                new Employee("Zhiyang", "456-7890", 29000),
+                new Employee("Piyush", "678-9012", 17000),
+                new Customer("Hitesh", "890-1234", 400),
+                new Employee("Ahsan", "901-2345", 34000),
+                new Customer("Wahiba", "123-9012", 750),
+                new Employee("Rowel", "456-8901", 24800)
+            ];
         }
 
         public static void Show()
