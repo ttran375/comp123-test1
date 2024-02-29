@@ -3,8 +3,6 @@
 
 namespace StoreApp
 {
-
-
    internal class Program
    {
        static void Main(string[] args)
@@ -41,17 +39,12 @@ namespace StoreApp
    }
 
 
-
-
    public abstract class StorePerson
    {
        protected static int ID = 100000;
-
-
        public string Cell { get; }
        public string Name { get; }
        public string Id { get; }
-
 
        public StorePerson(string name, string cell)
        {
